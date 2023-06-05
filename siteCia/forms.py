@@ -1,10 +1,10 @@
-from siteCia import app
+from siteCia.init import app
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField,BooleanField, DateField, IntegerField,SelectField, \
     TextAreaField, widgets, SelectMultipleField, TimeField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
-from siteCia import Usuario
+from siteCia.models import Usuario
 
 # Cadastros:
 # 	fazer logica de salvar excel com dados dos forms - ok

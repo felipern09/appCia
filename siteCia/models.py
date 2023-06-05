@@ -1,7 +1,4 @@
-# Banco de dados:
-# 	adicionar db substituiçoes
-
-from siteCia import database, login_manager
+from siteCia.init import database, login_manager
 import datetime
 from flask_login import UserMixin
 import pytz

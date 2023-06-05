@@ -1,6 +1,7 @@
-from siteCia import app, database, cadastro  # , bcrypt
-from siteCia import Usuario, Post, Comentario, Curtida, Unidade, SolicitacaoFerias, Substituicoes
-from siteCia import FormLogin, CadastrarAutonomo, CadastrarEstagiario, CadastrarFuncionario, TipoColaborador, \
+from siteCia.init import app, database
+from siteCia import cadastro
+from siteCia.models import Usuario, Post, Comentario, Curtida, Unidade, SolicitacaoFerias, Substituicoes
+from siteCia.forms import FormLogin, CadastrarAutonomo, CadastrarEstagiario, CadastrarFuncionario, TipoColaborador, \
     FormCriarPost, FormAlterarSenha, FormAlterarEmail, FormAlterarUser, FormAlterarInsta, FormAlterarLinkedin, \
     FormAlterarTt, AlterarFoto, FormCriarComent, Substituir, MsgPrivada, DataFerias, MontarGrade, CadastrarUsuario, \
     CadastrarLote, HorariosLote
@@ -10,7 +11,7 @@ import secrets
 import os
 from datetime import datetime
 from PIL import Image
-from siteCia import Calcular
+from siteCia.calculo_folha import Calcular
 from siteCia import contatos_colab as contatos
 from flask_mobility import Mobility
 
