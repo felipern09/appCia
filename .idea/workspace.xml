@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
