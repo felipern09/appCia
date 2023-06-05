@@ -1,0 +1,78 @@
+body{
+    background-color:#B3E5FC;
+    border-radius: 10px;
+}
+
+.card{
+    width: 550px;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    background-color:	#f08080;
+}
+
+.text-justify{
+text-align: justify;
+}
+
+.card2{
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    background-color:	#f5f5f5;
+}
+.card3{
+    width: 755px;
+    border: none;
+    border-radius: 10px;
+    background-color:	white;
+}
+.stats{
+    background: #f2f5f8 !important;
+    color: #000 !important;
+}
+
+.articles{
+    font-size:10px;
+    color: #a1aab9;
+}
+
+.number1{
+    font-weight:500;
+}
+
+.followers{
+    font-size:10px;
+    color: #a1aab9;
+}
+
+.number2{
+    font-weight:500;
+}
+
+.rating{
+    font-size:10px;
+    color: #a1aab9;
+}
+
+.number3{
+    font-weight:500;
+}
+
+.oculta{
+    display: none;
+    opacity: 0;
+    background-color: transparent;
+}
+
+.lateral{
+    width: 190px;
+}
+
+.imgpost{
+    max-height: 450px;
+    max-width: 450px;
+    height: auto;
+    width: auto;
+}
