@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="row"></div>
+<div class="col-8 mx-auto">
+	{% if post.foto_post %}
+        <div class="ms-5 mb-3">
+            <div class="card2 p-2 mt-2 border shadow-sm">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <img src="/static/fotos_post/{{post.foto_post}}" class="img-fluid float-start imgpost" />
+                  </div>
+                    <div class="col-md-6 mb-4">
+                      <a href="{{url_for('perfilof', usuario_id=post.autor.id)}}">
+                        <img src="/static/fotos_perfil/{{post.autor.foto_perfil}}" class="img float-end" width="40px">
+                      </a>
+                      <div class="container-col">
+                          <p class="text-muted 1h-sm">
+                            {{ post.corpo }}
+                          </p>
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col float-end">
+                        {% if post.autor.id == current_user.id %}
+                            <button type="button" class="btn btn-sm btn-outline-danger float-end" id="exc_{{post.id}}" data-bs-toggle="modal" data-bs-target="#excluir_post">Excluir</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary float-end" id="edit_{{post.id}}" data-bs-toggle="modal" data-bs-target="#editar_post">Editar</button>
+                        {% else %}
+                            {% if post.autor.id == current_user.id or current_user.tipo_usuario == 'master'or current_user.tipo_usuario == 'diretor' or current_user.tipo_usuario == 'presidente' %}
+                                <button type="button" class="btn btn-sm btn-outline-danger float-end" id="ex_{{post.id}}" data-bs-toggle="modal" data-bs-target="#excluir_post">Excluir</button>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="ms-5 mb-3">
+            <div class="card2 p-2 mt-2 border shadow-sm">
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <a href="{{url_for('perfilof', usuario_id=post.autor.id)}}">
+                            <img src="/static/fotos_perfil/{{post.autor.foto_perfil}}" class="img float-end" width="40px">
+                          </a>
+                        <div class="container-col">
+                            <p class="text-muted 1h-sm">
+                                 {{ post.corpo }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col float-end">
+                        {% if post.autor.id == current_user.id %}
+                            <button type="button" class="btn btn-sm btn-outline-danger float-end" id="excl_{{post.id}}" data-bs-toggle="modal" data-bs-target="#excluir_post">Excluir</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary float-end" id="edita_{{post.id}}" data-bs-toggle="modal" data-bs-target="#editar_post">Editar</button>
+                        {% else %}
+                            {% if post.autor.id == current_user.id or current_user.tipo_usuario == 'master'or current_user.tipo_usuario == 'diretor' or current_user.tipo_usuario == 'presidente' %}
+                                <button type="button" class="btn btn-sm btn-outline-danger float-end" id="exl_{{post.id}}" data-bs-toggle="modal" data-bs-target="#excluir_post">Excluir</button>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+<!-- Modal -->
+<div class="modal fade" id="editar_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="label_edit">Editar</h5>
+      </div>
+        <form method="POST">
+            {{ formpost_token }}
+            <div class="modal-body">
+              {{ formpost.corpo(class="form-control", placeholder="Reescreva seu post aqui!") }}
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                {{ formpost.botao_submit_post(class="btn btn-outline-danger") }}
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<div class="modal fade" id="excluir_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="label_editar">Tem certeza que deseja excluir este post?</h5>
+      </div>
+      <div class="modal-body">
+          Essa ação não poderá ser desfeita!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-outline-danger">
+            <a href="{{url_for('terminate', post_id=post.id)}}" style="text-decoration: None; color: red;">
+                Excluir
+            </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+

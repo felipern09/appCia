@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="container ms-5">
+        <div class="col-9">
+            <div class="card2 ms-5 shadow p-3">
+                    <div id="documentos">
+                        <h2>Desempenho</h2>
+                        <p><h4>Seu resultado na última avaliação de desempenho:</h4></p>
+                        <p1>Comparativo: Sua nota x Média do departemento x Média da Cia<br></p1>
+                        <p2>Deparamento: {{usuario.depart}}<br></p2>
+                        <p2><img src="../static/IMGS/av.png" width=750px height=450px></p2>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

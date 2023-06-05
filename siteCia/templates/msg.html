@@ -1,0 +1,22 @@
+{% for msg in mensagem %}
+<div class="row">
+    {% if msg.autor == current_user.id %}
+
+        <div class="col-6"></div>
+        <div class="col-6">
+            <div class="card2 text-end" style="width: auto">
+                {{msg}}}
+            </div>
+        </div>
+    {%else%}
+        <div class="col-6">
+            <div class="card2 text-end" style="width: auto">
+                {{msg}}}
+            </div>
+        </div>
+        <div class="col-6"></div>
+    {%endif%}
+</div>
+{% endfor %}
+
+

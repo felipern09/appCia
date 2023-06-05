@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="container ms-5">
+    <div class="col-8">
+        <div class="card2 ms-5 shadow p-3">
+            <h6>Horários Adicionados:</h6>
+            <div class="col text-end">
+                <button class="btn btn-secondary mt-4 text-end">Gerar Grade</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 ms-5">
+    <div class="col-8">
+        <div class="card2 ms-5 shadow p-3">
+            <form method="POST" action="" class="border p-2">
+                {{ form_grade.csrf_token }}
+                <h4>Montar Grade</h4>
+                <h6>Formulário para adicionar horário de professor</h6>
+
+                <fieldset>
+                    <div class="form-group p-2">
+                        <div class="col-6">
+                            {{ form_grade.professor.label(class="form-control-label") }}
+                            {{ form_grade.professor(class="form-control") }}
+
+                            {{ form_grade.depto.label(class="form-control-label") }}
+                            {{ form_grade.depto(class="form-control") }}
+                        </div>
+                            <div class="row mt-2 ms-2"> Informe os horários disponíveis do professor:</div>
+                            <div class="row mt-2">
+                                <div class="col-6 border">
+                                    Segunda:
+                                    <div class="row">
+                                        <div class="col-5">
+                                            {{ form_grade.deseg.label(class="form-control-label") }}
+                                            {{ form_grade.deseg(class="form-control") }}
+                                        </div>
+                                        <div class="col-5">
+                                            {{ form_grade.ateseg.label(class="form-control-label") }}
+                                            {{ form_grade.ateseg(class="form-control") }}
+                                        </div>
+                                        <div class="col-2"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6 border">
+                                    Terça:
+                                    <div class="row">
+                                        <div class="col-5">
+                                            {{ form_grade.deter.label(class="form-control-label") }}
+                                            {{ form_grade.deter(class="form-control") }}
+                                        </div>
+                                        <div class="col-5">
+                                            {{ form_grade.ateter.label(class="form-control-label") }}
+                                            {{ form_grade.ateter(class="form-control") }}
+                                        </div>
+                                        <div class="col-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-6 border">
+                                    Quarta:
+                                    <div class="row">
+                                        <div class="col-5">
+                                            {{ form_grade.dequa.label(class="form-control-label") }}
+                                            {{ form_grade.dequa(class="form-control") }}
+                                        </div>
+                                        <div class="col-5">
+                                            {{ form_grade.atequa.label(class="form-control-label") }}
+                                            {{ form_grade.atequa(class="form-control") }}
+                                        </div>
+                                        <div class="col-2"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6 border">
+                                    Quinta:
+                                    <div class="row">
+                                        <div class="col-5">
+                                            {{ form_grade.dequi.label(class="form-control-label") }}
+                                            {{ form_grade.dequi(class="form-control") }}
+                                        </div>
+                                        <div class="col-5">
+                                            {{ form_grade.atequi.label(class="form-control-label") }}
+                                            {{ form_grade.atequi(class="form-control") }}
+                                        </div>
+                                        <div class="col-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-6 border">
+                                    Sexta:
+                                    <div class="row">
+                                        <div class="col-5">
+                                            {{ form_grade.desex.label(class="form-control-label") }}
+                                            {{ form_grade.desex(class="form-control") }}
+                                        </div>
+                                        <div class="col-5">
+                                            {{ form_grade.atesex.label(class="form-control-label") }}
+                                            {{ form_grade.atesex(class="form-control") }}
+                                        </div>
+                                        <div class="col-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{ form_grade.botao_enviar(class="btn btn-secondary mt-4 float-end") }}
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

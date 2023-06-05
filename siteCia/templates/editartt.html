@@ -1,0 +1,22 @@
+{% extends 'editarPerfil.html' %}
+
+{% block formulario %}
+<form method="POST" action="" class="broder p-4 mt-2">
+    {{ form_tt.csrf_token }}
+    <div class="form-group" style="width: 400px">
+        {{ form_tt.novott.label(class="form-control-label") }}
+        {% if form_tt.novott.errors %}
+            {{ form_tt.novott(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_tt.novott.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_tt.novott(class="form-control") }}
+        {% endif %}
+    </div>
+    {{ form_tt.botao_submit_tt(class="btn btn-secondary mt-4") }}
+
+</form>
+{% endblock %}

@@ -1,0 +1,322 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <div class="container mt-3 ms-5">
+        <div class="col-10">
+            <div class="card2 ms-5 shadow p-3">
+				<h3>Prévia da folha do mês atual</h3>
+				<p>Os valores e horas listados abaixo <strong style="color: red;">NÃO</strong> constituem promessa de pagamento.<br>
+				As faltas não estão presentes na grade abaixo e serão lançadas no contracheque no fechamento da folha.</p>
+					<table class="table mt-4 table-striped table-bordered table-responsive">
+					  <thead>
+						<tr>
+							{% if dias[0] <= hoje %}
+							<th scope="col">{{ dias_st[0] }}</th>
+							{% endif %}
+							{% if dias[1] <= hoje %}
+							<th scope="col">{{ dias_st[1] }}</th>
+							{% endif %}
+							{% if dias[2] <= hoje %}
+							<th scope="col">{{ dias_st[2] }}</th>
+							{% endif %}
+							{% if dias[3] <= hoje %}
+							<th scope="col">{{ dias_st[3] }}</th>
+							{% endif %}
+							{% if dias[4] <= hoje %}
+							<th scope="col">{{ dias_st[4] }}</th>
+							{% endif %}
+							{% if dias[5] <= hoje %}
+							<th scope="col">{{ dias_st[5] }}</th>
+							{% endif %}
+							{% if dias[6] <= hoje %}
+							<th scope="col">{{ dias_st[6] }}</th>
+							{% endif %}
+							{% if dias[7] <= hoje %}
+							<th scope="col">{{ dias_st[7] }}</th>
+							{% endif %}
+							{% if dias[8] <= hoje %}
+							<th scope="col">{{ dias_st[8] }}</th>
+							{% endif %}
+							{% if dias[9] <= hoje %}
+							<th scope="col">{{ dias_st[9] }}</th>
+							{% endif %}
+							{% if dias[10] <= hoje %}
+							<th scope="col">{{ dias_st[10] }}</th>
+							{% endif %}
+							{% if dias[11] <= hoje %}
+							<th scope="col">{{ dias_st[11] }}</th>
+							{% endif %}
+							{% if dias[12] <= hoje %}
+							<th scope="col">{{ dias_st[12] }}</th>
+							{% endif %}
+							{% if dias[13] <= hoje %}
+							<th scope="col">{{ dias_st[13] }}</th>
+							{% endif %}
+							{% if dias[14] <= hoje %}
+							<th scope="col">{{ dias_st[14] }}</th>
+							{% endif %}
+						</tr>
+						<tr class="semana">
+							{% if dias[0] <= hoje %}
+							<td>{{ diasemana[0] }}</td>
+							{% endif %}
+							{% if dias[1] <= hoje %}
+							<td>{{ diasemana[1] }}</td>
+							{% endif %}
+							{% if dias[2] <= hoje %}
+							<td>{{ diasemana[2] }}</td>
+							{% endif %}
+							{% if dias[3] <= hoje %}
+							<td>{{ diasemana[3] }}</td>
+							{% endif %}
+							{% if dias[4] <= hoje %}
+							<td>{{ diasemana[4] }}</td>
+							{% endif %}
+							{% if dias[5] <= hoje %}
+							<td>{{ diasemana[5] }}</td>
+							{% endif %}
+							{% if dias[6] <= hoje %}
+							<td>{{ diasemana[6] }}</td>
+							{% endif %}
+							{% if dias[7] <= hoje %}
+							<td>{{ diasemana[7] }}</td>
+							{% endif %}
+							{% if dias[8] <= hoje %}
+							<td>{{ diasemana[8] }}</td>
+							{% endif %}
+							{% if dias[9] <= hoje %}
+							<td>{{ diasemana[9] }}</td>
+							{% endif %}
+							{% if dias[10] <= hoje %}
+							<td>{{ diasemana[10] }}</td>
+							{% endif %}
+							{% if dias[11] <= hoje %}
+							<td>{{ diasemana[11] }}</td>
+							{% endif %}
+							{% if dias[12] <= hoje %}
+							<td>{{ diasemana[12] }}</td>
+							{% endif %}
+							{% if dias[13] <= hoje %}
+							<td>{{ diasemana[13] }}</td>
+							{% endif %}
+							{% if dias[14] <= hoje %}
+							<td>{{ diasemana[14] }}</td>
+							{% endif %}
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+							{% if dias[0] <= hoje %}
+							<td>{{ horas[0] }}</td>
+							{% endif %}
+							{% if dias[1] <= hoje %}
+							<td>{{ horas[1] }}</td>
+							{% endif %}
+							{% if dias[2] <= hoje %}
+							<td>{{ horas[2] }}</td>
+							{% endif %}
+							{% if dias[3] <= hoje %}
+							<td>{{ horas[3] }}</td>
+							{% endif %}
+							{% if dias[4] <= hoje %}
+							<td>{{ horas[4] }}</td>
+							{% endif %}
+							{% if dias[5] <= hoje %}
+							<td>{{ horas[5] }}</td>
+							{% endif %}
+							{% if dias[6] <= hoje %}
+							<td>{{ horas[6] }}</td>
+							{% endif %}
+							{% if dias[7] <= hoje %}
+							<td>{{ horas[7] }}</td>
+							{% endif %}
+							{% if dias[8] <= hoje %}
+							<td>{{ horas[8] }}</td>
+							{% endif %}
+							{% if dias[9] <= hoje %}
+							<td>{{ horas[9] }}</td>
+							{% endif %}
+							{% if dias[10] <= hoje %}
+							<td>{{ horas[10] }}</td>
+							{% endif %}
+							{% if dias[11] <= hoje %}
+							<td>{{ horas[11] }}</td>
+							{% endif %}
+							{% if dias[12] <= hoje %}
+							<td>{{ horas[12] }}</td>
+							{% endif %}
+							{% if dias[13] <= hoje %}
+							<td>{{ horas[13] }}</td>
+							{% endif %}
+							{% if dias[14] <= hoje %}
+							<td>{{ horas[14] }}</td>
+							{% endif %}
+						</tr>
+					  </tbody>
+					</table>
+					<table class="table mt-5 table-striped align-middle table-bordered table-responsive">
+					  <thead>
+						<tr>
+							{% if dias[15] <= hoje %}
+							<th scope="col">{{ dias_st[15] }}</th>
+							{% endif %}
+							{% if dias[16] <= hoje %}
+							<th scope="col">{{ dias_st[16] }}</th>
+							{% endif %}
+							{% if dias[17] <= hoje %}
+							<th scope="col">{{ dias_st[17] }}</th>
+							{% endif %}
+							{% if dias[18] <= hoje %}
+							<th scope="col">{{ dias_st[18] }}</th>
+							{% endif %}
+							{% if dias[19] <= hoje %}
+							<th scope="col">{{ dias_st[19] }}</th>
+							{% endif %}
+							{% if dias[20] <= hoje %}
+							<th scope="col">{{ dias_st[20] }}</th>
+							{% endif %}
+							{% if dias[21] <= hoje %}
+							<th scope="col">{{ dias_st[21] }}</th>
+							{% endif %}
+							{% if dias[22] <= hoje %}
+							<th scope="col">{{ dias_st[22] }}</th>
+							{% endif %}
+							{% if dias[23] <= hoje %}
+							<th scope="col">{{ dias_st[23] }}</th>
+							{% endif %}
+							{% if dias[24] <= hoje %}
+							<th scope="col">{{ dias_st[24] }}</th>
+							{% endif %}
+							{% if dias[25] <= hoje %}
+							<th scope="col">{{ dias_st[25] }}</th>
+							{% endif %}
+							{% if dias[26] <= hoje %}
+							<th scope="col">{{ dias_st[26] }}</th>
+							{% endif %}
+							{% if dias[27] <= hoje %}
+							<th scope="col">{{ dias_st[27] }}</th>
+							{% endif %}
+							{% if dias[28] <= hoje %}
+							<th scope="col">{{ dias_st[28] }}</th>
+							{% endif %}
+							{% if dias[29] <= hoje %}
+							<th scope="col">{{ dias_st[29] }}</th>
+							{% endif %}
+							{% if dias[30] <= hoje %}
+							<th scope="col">{{ dias_st[30] }}</th>
+							{% endif %}
+						</tr>
+						<tr>
+							{% if dias[15] <= hoje %}
+							<td>{{ diasemana[15] }}</td>
+							{% endif %}
+							{% if dias[16] <= hoje %}
+							<td>{{ diasemana[16] }}</td>
+							{% endif %}
+							{% if dias[17] <= hoje %}
+							<td>{{ diasemana[17] }}</td>
+							{% endif %}
+							{% if dias[18] <= hoje %}
+							<td>{{ diasemana[18] }}</td>
+							{% endif %}
+							{% if dias[19] <= hoje %}
+							<td>{{ diasemana[19] }}</td>
+							{% endif %}
+							{% if dias[20] <= hoje %}
+							<td>{{ diasemana[20] }}</td>
+							{% endif %}
+							{% if dias[21] <= hoje %}
+							<td>{{ diasemana[21] }}</td>
+							{% endif %}
+							{% if dias[22] <= hoje %}
+							<td>{{ diasemana[22] }}</td>
+							{% endif %}
+							{% if dias[23] <= hoje %}
+							<td>{{ diasemana[23] }}</td>
+							{% endif %}
+							{% if dias[24] <= hoje %}
+							<td>{{ diasemana[24] }}</td>
+							{% endif %}
+							{% if dias[25] <= hoje %}
+							<td>{{ diasemana[25] }}</td>
+							{% endif %}
+							{% if dias[26] <= hoje %}
+							<td>{{ diasemana[26] }}</td>
+							{% endif %}
+							{% if dias[27] <= hoje %}
+							<td>{{ diasemana[27] }}</td>
+							{% endif %}
+							{% if dias[28] <= hoje %}
+							<td>{{ diasemana[28] }}</td>
+							{% endif %}
+							{% if dias[29] <= hoje %}
+							<td>{{ diasemana[29] }}</td>
+							{% endif %}
+							{% if dias[30] <= hoje %}
+							<td>{{ diasemana[30] }}</td>
+							{% endif %}
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+							{% if dias[15] <= hoje %}
+							<td>{{ horas[15] }}</td>
+							{% endif %}
+							{% if dias[16] <= hoje %}
+							<td>{{ horas[16] }}</td>
+							{% endif %}
+							{% if dias[17] <= hoje %}
+							<td>{{ horas[17] }}</td>
+							{% endif %}
+							{% if dias[18] <= hoje %}
+							<td>{{ horas[18] }}</td>
+							{% endif %}
+							{% if dias[19] <= hoje %}
+							<td>{{ horas[19] }}</td>
+							{% endif %}
+							{% if dias[20] <= hoje %}
+							<td>{{ horas[20] }}</td>
+							{% endif %}
+							{% if dias[21] <= hoje %}
+							<td>{{ horas[21] }}</td>
+							{% endif %}
+							{% if dias[22] <= hoje %}
+							<td>{{ horas[22] }}</td>
+							{% endif %}
+							{% if dias[23] <= hoje %}
+							<td>{{ horas[23] }}</td>
+							{% endif %}
+							{% if dias[24] <= hoje %}
+							<td>{{ horas[24] }}</td>
+							{% endif %}
+							{% if dias[25] <= hoje %}
+							<td>{{ horas[25] }}</td>
+							{% endif %}
+							{% if dias[26] <= hoje %}
+							<td>{{ horas[26] }}</td>
+							{% endif %}
+							{% if dias[27] <= hoje %}
+							<td>{{ horas[27] }}</td>
+							{% endif %}
+							{% if dias[28] <= hoje %}
+							<td>{{ horas[28] }}</td>
+							{% endif %}
+							{% if dias[29] <= hoje %}
+							<td>{{ horas[29] }}</td>
+							{% endif %}
+							{% if dias[30] <= hoje %}
+							<td>{{ horas[30] }}</td>
+							{% endif %}
+						</tr>
+					  </tbody>
+					</table>
+				{% if current_user.remuneracao == 'Horista' %}
+				<p>Previsão do total de horas no fechamento da folha: {{somahoras}} horas.</p>
+				{% endif %}
+				<p>Seu salário bruto (sem contar os descontos) será <strong>aproximadamente</strong> {{salariof}}<strong style="font-size: 12px;">**</strong>.<br>
+					Seu salário líquido (após os descontos) será <strong>aproximadamente</strong> {{sal}}<strong style="font-size: 12px;">**</strong></p>
+				<p style="font-size: 12px;"> ** Os valores acima poderão sofrer alterações para mais ou para menos de acordo com o fechamento da grade horária.</p>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

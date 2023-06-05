@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+        {% if post.foto_post %}
+            <div class="col-8 mx-auto mb-3">
+                <div class="card2 p-2 mt-2 ms-5 shadow">
+                    <div class="row">
+                        <div class="col-3 container-col">
+                                  <p class="text-justify text-muted" style="font-size: 12px;">
+                                      {{ post.autor.nome.split(' ')[0] }}:<br>{{ post.autor.cargo | replace('Oaf','OAF') }}
+                                  </p>
+                        </div>
+                        <div class="col-9 text-end">
+                          <a href="{{url_for('perfilof', usuario_id=post.autor.id)}}">
+                            <img src="../static/fotos_perfil/{{post.autor.foto_perfil}}" class="rounded-circle img float-end" width="50px">
+                          </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mb-4 text-center align-middle">
+                          <img src="../static/fotos_post/{{post.foto_post}}" class="img-fluid mx-auto imgpost" />
+                        </div>
+
+                    </div>
+                          <div class="container-col">
+                              <p class="text-justify 1h-sm">
+                                  {{ post.corpo }}
+                              </p>
+                          </div>
+
+                    <div class="row">
+                            <div class="col">
+                            {%if post.postcurtido != []%}
+                                {%for curtida in post.postcurtido%}
+                                    {% if curtida.id_quem_curtiu|int == current_user.id %}
+                                        <button class="button-like liked" onclick='x(this)' id="{{post.id}}">
+                                        <i class="fa fa-heart"></i>
+                                            <span>Curtir &hearts;</span>
+                                        </button>
+                                    {% else %}
+                                        <button class="button-like" onclick='x(this)' id="{{ post.id }}">
+                                        <i class="fa fa-heart"></i>
+                                            <span>Curtir &hearts;</span>
+                                        </button>
+                                    {% endif %}
+                                {%endfor%}
+                            <p><a href="{{url_for('noticias')}}" style="color: black; font-size: 10px; text-decoration: None;">Visualizar curtidas</a></p>
+                            {%else%}
+                                    <button class="button-like" onclick='x(this)' id="{{ post.id  }}">
+                                    <i class="fa fa-heart"></i>
+                                        <span>Curtir &hearts;</span>
+                                    </button>
+                            {%endif%}
+                                {% if post.autor.id == current_user.id or current_user.tipo_usuario == 'master'or current_user.tipo_usuario == 'diretor' or current_user.tipo_usuario == 'presidente' %}
+                                     <a class="text-muted text-decoration-none text-end float-end" href="{{url_for('excluirpost', post_id=post.id)}}">
+                                        Editar / Excluir
+                                     </a>
+                                {% endif %}
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                             <p class="text-end text-muted" style="font-size: 10px">
+                                Publicado em: {{ post.data_criacao.strftime('%d/%m/%Y %H:%M') }}<br>
+                                 {{post.autor.unid.nome}}
+                             </p>
+                        </div>
+                    </div>
+                    <div class="container mt-2 border-top">
+                        <div class="col-12">
+                            {% for coment in post.comentario %}
+                                <div class="card mt-1 p-2">
+                                    <div class="container text-end p-1">
+                                        <div class="row">
+                                            <div class="col-2 text-center">
+                                                <a href="{{url_for('perfilof', usuario_id=coment.autor_coment)}}">
+                                                    <img src="../static/fotos_perfil/{{ coment.autor.foto_perfil }}" class="rounded img float-end" width="40px">
+                                                </a>
+                                            </div>
+                                            <div class="col-10 text-justify text-start">
+                                                {{ coment.corpo_coment }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="container text-end">
+                        <a class="text-end text-muted text-decoration-none" href="{{url_for('comentar', post=post.id)}}">
+                            Comentar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="col-8 mx-auto mb-3">
+                <div class="card2 p-2 mt-2 border shadow-sm">
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <a href="{{url_for('perfilof', usuario_id=post.autor.id)}}">
+                                <img src="../static/fotos_perfil/{{post.autor.foto_perfil}}" class="rouded-circle img float-end" width="40px">
+                            </a>
+                            <div class="container-col">
+                                <p class="text-muted 1h-sm">
+                                     {{ post.corpo }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-2 border-top">
+                        <div class="col-12">
+                            {% for coment in post.comentario %}
+                                <div class="card mt-1" style="margin-left: 18rem;">
+                                    <div class="container text-end p-1">
+                                        <div class="row">
+                                            <div class="col-2 text-center">
+                                                <a href="{{url_for('perfilof', usuario_id=coment.autor_coment)}}">
+                                                    <img src="../static/fotos_perfil/{{ coment.autor.foto_perfil }}" class="rounded img float-end" width="30px">
+                                                </a>
+                                            </div>
+                                            <div class="col-10 text-start">
+                                                {{ coment.corpo_coment }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% block formulario %}
+            <div class="col-8 mx-auto mb-3 mt-3">
+                <div class="card3 ms-5 p-2 mt-2 border shadow-sm">
+                        <div class="row">
+                                <div class="col-1">
+                                    <div class="float-end">
+                                        <img src="../static/fotos_perfil/{{current_user.foto_perfil}}" class="rounded-circle img float-end" width="30px">
+                                    </div>
+                                </div>
+                                <div class="col-11">
+                                   <form method="POST">
+                                        {{ formcoment_token }}
+                                       <div class="row">
+                                            <div class="col-10">
+                                                {% if formcoment.corpo.errors %}
+                                                    {{ formcoment.corpo(class="form-control is-invalid") }}
+                                                    <div class="invalid-feedback">
+                                                    {% for erro in formcoment.corpo.errors %}
+                                                        {{ erro }}
+                                                    {% endfor %}
+                                                    </div>
+                                                {% else %}
+                                                    {{ formcoment.corpo(class="form-control", rows="1", type="text", placeholder="Adicione um comentário") }}
+                                                {% endif %}
+                                            </div>
+
+                                            <div class="col-2 p-2">
+                                                <div class="float-end">
+                                                    {{ formcoment.botao_submit_coment(class="btn-sm btn-outline-secondary float-end mt-1") }}
+                                                </div>
+                                            </div>
+                                       </div>
+                                   </form>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        {% endblock %}
+{% endblock %}

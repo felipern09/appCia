@@ -1,0 +1,22 @@
+{% extends 'editarPerfil.html' %}
+
+{% block formulario %}
+<form method="POST" action="" class="broder p-4 mt-2">
+    {{ form_insta.csrf_token }}
+    <div class="form-group" style="width: 400px">
+        {{ form_insta.novoinsta.label(class="form-control-label") }}
+        {% if form_insta.novoinsta.errors %}
+            {{ form_insta.novoinsta(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_insta.novoinsta.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_insta.novoinsta(class="form-control") }}
+        {% endif %}
+    </div>
+    {{ form_insta.botao_submit_insta(class="btn btn-secondary mt-4") }}
+
+</form>
+{% endblock %}

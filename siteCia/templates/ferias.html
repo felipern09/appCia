@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <div class="container mt-3 ms-5">
+        <div class="col-8">
+            <div class="card2 shadow p-3 ms-5">
+                <div>
+                    <h4>Solicitar Férias</h4>
+                    <p>Defina as datas que deseja para suas férias.<br>
+                    Suas férias vencem em <b style="color: red;">xx/xx/xxxx</b>.<br>Se, até esta data, você não solicitar férias, deverá sair de férias obrigatórias.</p>
+                </div>
+                <p>O pedido deve ser feito com, no mínimo, <b style="color: red;">60</b> dias de antecedência.<br>
+                    Assim, a data mínima para início das suas férias é <b>{{inicio_format}}</b>.</p>
+                    Você poderá dividir suas férias em até 3 períodos.<br>Selecione em quantos períodos gostaria de dividir as férias no formulário abaixo.<br>
+                    <p style="font-size: 12px;">**Todos os períodos de férias devem ser definidos de uma única vez.</p>
+
+                    <form method="POST" action="" class="border p-2">
+                        {{ formferias.csrf_token }}
+                        <input type="radio" onclick="ferias()" checked id="1" name="valor" class="ms-2"> <label for="1">Um período</label>
+                        <input type="radio" onclick="ferias2()" id="2" name="valor" class="ms-2"> <label for="2">Dois períodos</label>
+                        <input type="radio" onclick="ferias3()" id="3" name="valor" class="ms-2"> <label for="3">Três períodos</label>
+                        <div class="mt-2">
+                            <p>Selecione as datas:<br></p>
+                            <div class="row" id="datas">
+                                <div class="card4 ms-5 col-3 shadow p-2">
+                                    <div class="divSquare">
+                                        <p>1º Período:<br></p>De:<br>
+                                        {{formferias.inicio1(min=inicio_min)}}
+                                    </div>
+                                    <div class="divSquare">
+                                        Até:<br>
+                                        {{formferias.fim1}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 mb-1 text-end">
+                            {{formferias.botao_enviarferias(class="btn btn-secondary")}}
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

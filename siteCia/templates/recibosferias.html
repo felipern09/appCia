@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <div class="container mt-3 ms-5">
+        <div class="col-8">
+            <div class="card2 ms-5 shadow p-3">
+				Meus pedidos
+				<ol>
+					{% for pedido in pedidos %}
+<!--						<li> Pedido feito em: {{pedido.data}} - {{pedido.inicio}} a {{pedido.fim}}</li>-->
+						<li>
+							Pedido feito em: {{pedido.datapedido}} - {{pedido.periodos}} período(s) - Status: {{pedido.status}}<br>
+							<text style="font-size: 10px">Primeiro período: {{pedido.inicioperiodo1}} a {{pedido.fimperiodo1}}.<br></text>
+							{% if pedido.periodos > 1 %}
+								<text style="font-size: 10px">Segundo período: {{pedido.inicioperiodo2}} a {{pedido.fimperiodo2}}.<br></text>
+							{%endif%}
+							{% if pedido.periodos==3 %}
+								<text style="font-size: 10px">Teceiro período: {{pedido.inicioperiodo3}} a {{pedido.fimperiodo3}}.</text>
+							{%endif%}
+						</li>
+					{% endfor %}
+				</ol>
+			</div>
+		</div>
+	</div>
+    <div class="container mt-3 ms-5">
+        <div class="col-8">
+            <div class="card2 ms-5 shadow p-3">
+				Recibos
+				<ul>
+					<li>Recibo XX a XX</li>
+					<li>Recibo YY a YY</li>
+					<li>Recibo ZZ a ZZ</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}

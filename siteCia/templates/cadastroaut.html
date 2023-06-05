@@ -1,0 +1,94 @@
+{% extends 'baselogin.html' %}
+
+{% block body %}
+<div class="container mt-5">
+        <div class="row">
+            <div class="col-8 mx-auto">
+                <form method="POST" action="" class="border p-5">
+                    {{ form_aut.csrf_token }}
+
+                    <fieldset>
+                        <div class="form-group">
+                        {{ form_aut.email.label(class="form-control-label") }}
+                        {{ form_aut.email(class="form-control") }}
+
+                        {{ form_aut.nome.label(class="form-control-label") }}
+                        {{ form_aut.nome(class="form-control") }}
+
+                        {{ form_aut.datanasc.label(class="form-control-label") }}
+                        {{ form_aut.datanasc(class="form-control") }}
+
+                        {{ form_aut.genero.label(class="form-control-label") }}
+                        {{ form_aut.genero(class="form-control") }}
+
+                        {{ form_aut.instru.label(class="form-control-label") }}
+                        {{ form_aut.instru(class="form-control") }}
+
+                        {{ form_aut.cid_nasc.label(class="form-control-label") }}
+                        {{ form_aut.cid_nasc(class="form-control") }}
+
+                        {{ form_aut.est_nasc.label(class="form-control-label") }}
+                        {{ form_aut.est_nasc(class="form-control") }}
+
+                        {{ form_aut.end_res.label(class="form-control-label") }}
+                        {{ form_aut.end_res(class="form-control") }}
+
+                        {{ form_aut.num.label(class="form-control-label") }}
+                        {{ form_aut.num(class="form-control") }}
+
+                        {{ form_aut.bair.label(class="form-control-label") }}
+                        {{ form_aut.bair(class="form-control") }}
+
+                        {{ form_aut.cep.label(class="form-control-label") }}
+                        {{ form_aut.cep(class="form-control") }}
+
+                        {{ form_aut.cid_end.label(class="form-control-label") }}
+                        {{ form_aut.cid_end(class="form-control") }}
+
+                        {{ form_aut.uf_end.label(class="form-control-label") }}
+                        {{ form_aut.uf_end(class="form-control") }}
+
+                        {{ form_aut.tel.label(class="form-control-label") }}
+                        {{ form_aut.tel(class="form-control") }}
+
+                        {{ form_aut.cpf.label(class="form-control-label") }}
+                        {{ form_aut.cpf(class="form-control") }}
+
+                        {{ form_aut.rg.label(class="form-control-label") }}
+                        {{ form_aut.rg(class="form-control") }}
+
+                        {{ form_aut.emis_rg.label(class="form-control-label") }}
+                        {{ form_aut.emis_rg(class="form-control") }}
+
+                        {{ form_aut.pis.label(class="form-control-label") }}
+                        {{ form_aut.pis(class="form-control") }}
+
+                        {{ form_aut.aula.label(class="form-control-label") }}
+                        {{ form_aut.aula(class="form-control") }}
+
+                        {{ form_aut.valorhr.label(class="form-control-label") }}
+                        {{ form_aut.valorhr(class="form-control") }}
+
+                        {{ form_aut.banco.label(class="form-control-label") }}
+                        {{ form_aut.banco(class="form-control") }}
+
+                        {{ form_aut.agencia.label(class="form-control-label") }}
+                        {{ form_aut.agencia(class="form-control") }}
+
+                        {{ form_aut.conta.label(class="form-control-label") }}
+                        {{ form_aut.conta(class="form-control") }}
+
+                        {{ form_aut.tipo_conta.label(class="form-control-label") }}
+                        {{ form_aut.tipo_conta(class="form-control") }}
+
+                        {{ form_aut.botao_submit_cadastroA(class="btn btn-secondary mt-4 float-end") }}
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
+

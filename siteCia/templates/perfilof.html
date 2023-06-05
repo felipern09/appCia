@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="row">
+    <div class="col-6">
+        <div class="container mt-5 d-flex ms-5">
+            <div class="card p-3 shadow">
+                <div class="d-flex align-items-center">
+                    <div class="image p-3">
+                        <img src="../static/fotos_perfil/{{ usuario.foto_perfil }}" height="240px"><br>
+                    </div>
+                    <div class="ml-5 w-100">
+                       <a href="{{ url_for('home') }}" style="color: black"><h4 class="mb-0 mt-0">{{ usuario.nome.split(' ')[0] }}</h4></a>
+                       <span>{{ usuario.cargo | replace('Oaf','OAF') }}</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center ms-4" id="redes">
+                    <a href="{{ usuario.linkedin }}" target="_blank" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-linkedin.png') }}" class="img-thumbnail" style="width: 30px;"></a>Linkedin
+                    <a href="https://www.instagram.com/{{ usuario.insta }}" target="_blank" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-insta.png') }}" class="img-thumbnail" style="width: 30px;"></a>Instagram
+                    <a href="https://www.twitter.com/{{ usuario.twitter }}" target="_blank" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-tt.png') }}" class="img-thumbnail" style="width: 30px;"></a>Twitter
+                    <a href="https://wa.me/55{{ usuario.whatsapp }}" target="_blank" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-wpp.png') }}" class="img-thumbnail" style="width: 30px;"></a>Whatsapp
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="col-6 text-center mt-5">
+        <form method="POST" enctype="multipart/form-data">
+        {{ form_msg_token }}
+            <fieldset>
+                <div class="form-group mt-1 ms-5 shadow-sm" >
+                    {% if form_msg.corpo.errors %}
+                        {{ form_msg.corpo(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                        {% for erro in form_msg.corpo.errors %}
+                            {{ erro }}
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form_msg.corpo(class="form-control", placeholder="Escreva uma mensagem privada...") }}
+                    {% endif %}
+                        <div class="col-3 text-end mt-1 float-end">
+                            {{ form_msg.botao_submit_msg(class="btn btn-outline-secondary float-end mt-1") }}
+                        </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endblock %}

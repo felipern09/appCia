@@ -1,0 +1,29 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="higth: 40%; z-index: 1000;" >
+  <div class="col-2">
+      <img src="{{ url_for('static', filename='imgs/logo_cia.png') }}" class="img-fluid ms-2" style="hight: 100px;">
+  </div>
+  <div class="col-2">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Início</a>
+  </div>
+  <div class="col-5"></div>
+  <div class="col-3">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="{{ url_for('static', filename='imgs/menu.png') }}" class="img-fluid ms-2" width="50px">
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      {% if 1==2 %}
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+        </form>
+      {% endif %}
+  </div>
+</nav>
+

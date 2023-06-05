@@ -1,0 +1,24 @@
+{% extends 'baselogin.html' %}
+{% block body %}
+    <div class="row" style="height: 60px;"></div>
+    <div class="row">
+        <div class="col-2 mt-5"></div>
+        <div class="col-10">
+            <div class="container ms-5 mt-2">
+                <div class="container mt-5">
+                    <li class="nav-item dropdown">
+                              <a class="nav-item dropdown-toggle" style="color: black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Para qual vaga você foi selecionado?
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{ url_for('cadastroest') }}">{{ form_tipo.estagiario.label }}</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('cadastrofunc') }}">{{ form_tipo.funcionario.label }}</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{ url_for('cadastroaut') }}">{{ form_tipo.autonomo.label }}</a></li>
+                              </ul>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

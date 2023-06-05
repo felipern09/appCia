@@ -1,0 +1,21 @@
+{% extends 'editarPerfil.html' %}
+
+{% block formulario %}
+<form method="POST" action="" class="broder p-4 mt-2">
+    {{ form_linkedin.csrf_token }}
+    <div class="form-group" style="width: 400px">
+        {{ form_linkedin.novolinkedin.label(class="form-control-label") }}
+        {% if form_linkedin.novolinkedin.errors %}
+            {{ form_linkedin.novolinkedin(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_linkedin.novolinkedin.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+            {{ form_linkedin.novolinkedin(class="form-control") }}
+        {% endif %}
+    </div>
+    {{ form_linkedin.botao_submit_linkedin(class="btn btn-secondary mt-4") }}
+</form>
+{% endblock %}

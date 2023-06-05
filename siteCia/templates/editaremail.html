@@ -1,0 +1,35 @@
+{% extends 'editarPerfil.html' %}
+
+{% block formulario %}
+<form method="POST" action="" class="broder p-4 mt-2">
+    {{ form_email.csrf_token }}
+    <div class="form-group" style="width: 300px">
+        {{ form_email.novoemail.label(class="form-control-label") }}
+        {% if form_email.novoemail.errors %}
+            {{ form_email.novoemail(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_email.novoemail.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_email.novoemail(class="form-control") }}
+        {% endif %}
+    </div>
+    <div class="form-group" style="width: 300px">
+        {{ form_email.confirma_email.label(class="form-control-label") }}
+        {% if form_email.confirma_email.errors %}
+            {{ form_email.confirma_email(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_email.confirma_email.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_email.confirma_email(class="form-control") }}
+        {% endif %}
+    </div>
+    {{ form_email.botao_submit_nemail(class="btn btn-secondary mt-4") }}
+
+</form>
+{% endblock %}

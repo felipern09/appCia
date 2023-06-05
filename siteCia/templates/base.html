@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rede Cia</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/like.css">
+
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    {% block body%}
+    {% if dispositivo == 'desktop'%}
+        {% include 'navbar.html' %}
+        {% include 'sidebar.html' %}
+        <div class="row" style="height: 60px;"></div>
+        <div class="row">
+            <div class="col-2 bg-light mx-auto" style="width: 500px;"></div>
+            <div class="col-10 mt-4 mx-auto">
+                {% block conteudo %}
+                {% endblock %}
+                <div class="container">
+                    {% with mensagens = get_flashed_messages(with_categories=True) %}
+                        {% if mensagens %}
+                            {% for categoria, mensagem in mensagens %}
+                                <div class="alert {{categoria}}">
+                                    {{ mensagem }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+    {% else %}
+        {% include 'navbar-mobile.html' %}
+        {% include 'footer-mobile.html' %}
+    {% endif %}
+   {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+    <script type="text/javascript" src="../static/js/ferias.js"></script>
+    <script type="text/javascript" src="../static/js/msg.js"></script>
+</body>
+</html>

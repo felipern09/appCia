@@ -1,0 +1,22 @@
+{% extends 'editarPerfil.html' %}
+
+{% block formulario %}
+<form method="POST" action="" class="broder p-4 mt-2">
+    {{ form_user.csrf_token }}
+    <div class="form-group" style="width: 400px">
+        {{ form_user.novousername.label(class="form-control-label") }}
+        {% if form_user.novousername.errors %}
+            {{ form_user.novousername(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_user.novousername.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_user.novousername(class="form-control") }}
+        {% endif %}
+    </div>
+    {{ form_user.botao_submit_username(class="btn btn-secondary mt-4") }}
+
+</form>
+{% endblock %}

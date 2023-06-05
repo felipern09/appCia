@@ -1,0 +1,48 @@
+{% extends 'editarPerfil.html' %}
+
+{% block formulario %}
+<form method="POST" action="" class="broder p-4 mt-2">
+    {{ form_senha.csrf_token }}
+    <div class="form-group" style="width: 300px">
+        {{ form_senha.senha.label(class="form-control-label") }}
+        {% if form_senha.senha.errors %}
+            {{ form_senha.senha(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_senha.senha.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_senha.senha(class="form-control") }}
+        {% endif %}
+    </div>
+    <div class="form-group" style="width: 300px">
+        {{ form_senha.novasenha.label(class="form-control-label") }}
+        {% if form_senha.novasenha.errors %}
+            {{ form_senha.novasenha(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_senha.novasenha.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_senha.novasenha(class="form-control") }}
+        {% endif %}
+    </div>
+    <div class="form-group" style="width: 300px">
+        {{ form_senha.confirma_senha.label(class="form-control-label") }}
+        {% if form_senha.confirma_senha.errors %}
+            {{ form_senha.confirma_senha(class="form-control is-invalid") }}
+            <div class="invalid-feedback">
+            {% for erro in form_senha.confirma_senha.errors %}
+                {{ erro }}
+            {% endfor %}
+            </div>
+        {% else %}
+        {{ form_senha.confirma_senha(class="form-control") }}
+        {% endif %}
+    </div>
+    {{ form_senha.botao_submit_senha(class="btn btn-secondary mt-4") }}
+
+</form>
+{% endblock %}

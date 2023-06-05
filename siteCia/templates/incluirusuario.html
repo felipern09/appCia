@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <div class="container mt-3 ms-5">
+        <div class="col-8">
+            <div class="card2 ms-5 shadow p-3">
+                <h5>Incluir apenas um usuário:</h5>
+                <form method="POST" action="" class="border p-5">
+                    {{ form_cadastrar.csrf_token }}
+
+                    <fieldset>
+                        <div class="form-group">
+                        {{ form_cadastrar.email.label(class="form-control-label") }}
+                        {{ form_cadastrar.email(class="form-control") }}
+
+                        {{ form_cadastrar.nome.label(class="form-control-label") }}
+                        {{ form_cadastrar.nome(class="form-control") }}
+
+                        {{ form_cadastrar.depart.label(class="form-control-label") }}
+                        {{ form_cadastrar.depart(class="form-control") }}
+
+                        {{ form_cadastrar.cargo.label(class="form-control-label") }}
+                        {{ form_cadastrar.cargo(class="form-control") }}
+
+                        {{ form_cadastrar.remuneracao.label(class="form-control-label") }}
+                        {{ form_cadastrar.remuneracao(class="form-control") }}
+
+                        {{ form_cadastrar.whatsapp.label(class="form-control-label") }}
+                        {{ form_cadastrar.whatsapp(class="form-control") }}
+
+                        {{ form_cadastrar.admissao.label(class="form-control-label") }}
+                        {{ form_cadastrar.admissao(class="form-control") }}
+
+                        {{ form_cadastrar.botao_submit_cadastrousu(class="btn btn-secondary mt-4 float-end") }}
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="card2 ms-5 mt-5 shadow p-3">
+                <h5>Incluir vários usuários em lote</h5>
+                <h6>O arquivo excel deve seguir padrão conforme exemplo:</h6>
+                <img src="../static/imgs/Exemplo.png" style="width: 100%; height: 80px;">
+                <p><a href="../static/Modelo incluir lote.xlsx" download>Baixar arquivo xlsx modelo</a></p>
+                <form method="POST" action="" class="border p-5">
+                    {{ form_lote.csrf_token }}
+
+                    <fieldset>
+                        <div class="form-group">
+                        {{ form_lote.arquivo.label(class="form-control-label") }}
+                        {{ form_lote.arquivo(class="form-control") }}
+
+                        {{ form_lote.botao_submit_arq(class="btn btn-secondary mt-4 float-end") }}
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends 'baselogin.html' %}
+
+{% block body %}
+<div class="container mt-5">
+        <div class="row">
+            <div class="col-8 mx-auto">
+                <form method="POST" action="" class="border p-5">
+                    {{ form_func.csrf_token }}
+
+                    <fieldset>
+                        <div class="form-group">
+                        {{ form_func.email.label(class="form-control-label") }}
+                        {{ form_func.email(class="form-control") }}
+
+                        {{ form_func.nome.label(class="form-control-label") }}
+                        {{ form_func.nome(class="form-control") }}
+
+                        {{ form_func.datanasc.label(class="form-control-label") }}
+                        {{ form_func.datanasc(class="form-control") }}
+
+                        {{ form_func.genero.label(class="form-control-label") }}
+                        {{ form_func.genero(class="form-control") }}
+
+                        {{ form_func.est_civ.label(class="form-control-label") }}
+                        {{ form_func.est_civ(class="form-control") }}
+
+                        {{ form_func.raca.label(class="form-control-label") }}
+                        {{ form_func.raca(class="form-control") }}
+
+                        {{ form_func.pcd.label(class="form-control-label") }}
+                        {{ form_func.pcd(class="form-control") }}
+
+                        {{ form_func.aposent.label(class="form-control-label") }}
+                        {{ form_func.aposent(class="form-control") }}
+
+                        {{ form_func.instru.label(class="form-control-label") }}
+                        {{ form_func.instru(class="form-control") }}
+
+                        {{ form_func.nacion.label(class="form-control-label") }}
+                        {{ form_func.nacion(class="form-control") }}
+
+                        {{ form_func.cid_nasc.label(class="form-control-label") }}
+                        {{ form_func.cid_nasc(class="form-control") }}
+
+                        {{ form_func.est_nasc.label(class="form-control-label") }}
+                        {{ form_func.est_nasc(class="form-control") }}
+
+                        {{ form_func.pai.label(class="form-control-label") }}
+                        {{ form_func.pai(class="form-control") }}
+
+                        {{ form_func.mae.label(class="form-control-label") }}
+                        {{ form_func.mae(class="form-control") }}
+
+                        {{ form_func.end_res.label(class="form-control-label") }}
+                        {{ form_func.end_res(class="form-control") }}
+
+                        {{ form_func.num.label(class="form-control-label") }}
+                        {{ form_func.num(class="form-control") }}
+
+                        {{ form_func.bair.label(class="form-control-label") }}
+                        {{ form_func.bair(class="form-control") }}
+
+                        {{ form_func.cep.label(class="form-control-label") }}
+                        {{ form_func.cep(class="form-control") }}
+
+                        {{ form_func.cid_end.label(class="form-control-label") }}
+                        {{ form_func.cid_end(class="form-control") }}
+
+                        {{ form_func.uf_end.label(class="form-control-label") }}
+                        {{ form_func.uf_end(class="form-control") }}
+
+                        {{ form_func.tel.label(class="form-control-label") }}
+                        {{ form_func.tel(class="form-control") }}
+
+                        {{ form_func.cpf.label(class="form-control-label") }}
+                        {{ form_func.cpf(class="form-control") }}
+
+                        {{ form_func.rg.label(class="form-control-label") }}
+                        {{ form_func.rg(class="form-control") }}
+
+                        {{ form_func.org_rg.label(class="form-control-label") }}
+                        {{ form_func.org_rg(class="form-control", placeholder="Exemplo: SSP-DF") }}
+
+                        {{ form_func.pis.label(class="form-control-label") }}
+                        {{ form_func.pis(class="form-control") }}
+
+                        {{ form_func.tit.label(class="form-control-label") }}
+                        {{ form_func.tit(class="form-control") }}
+
+                        {{ form_func.zona.label(class="form-control-label") }}
+                        {{ form_func.zona(class="form-control") }}
+
+                        {{ form_func.sec.label(class="form-control-label") }}
+                        {{ form_func.sec(class="form-control") }}
+
+                        {{ form_func.ctps.label(class="form-control-label") }}
+                        {{ form_func.ctps(class="form-control") }}
+
+                        {{ form_func.serie.label(class="form-control-label") }}
+                        {{ form_func.serie(class="form-control") }}
+
+                        {{ form_func.uf_ctps.label(class="form-control-label") }}
+                        {{ form_func.uf_ctps(class="form-control") }}
+
+                        {{ form_func.emis_ctps.label(class="form-control-label") }}
+                        {{ form_func.emis_ctps(class="form-control") }}
+
+                        {{ form_func.depart.label(class="form-control-label") }}
+                        {{ form_func.depart(class="form-control") }}
+
+                        {{ form_func.cargo.label(class="form-control-label") }}
+                        {{ form_func.cargo(class="form-control") }}
+
+                        {{ form_func.horario.label(class="form-control-label") }}
+                        {{ form_func.horario(class="form-control") }}
+
+                            {{ form_func.botao_submit_cadastroF(class="btn btn-secondary mt-4 float-end") }}
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

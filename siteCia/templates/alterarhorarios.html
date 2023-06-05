@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <div class="container mt-3 ms-5">
+        <div class="col-8">
+            <div class="card2 ms-5 mt-1 shadow p-3">
+                <h5>Alterar todos horários em lote</h5>
+                <h6>O arquivo excel deve seguir padrão conforme exemplo:</h6>
+                <img src="../static/imgs/Exemplo.png" style="width: 100%; height: 80px;">
+                <p><a href="../static/Modelo incluir lote.xlsx" download>Baixar arquivo xlsx modelo</a></p>
+                <form method="POST" action="" class="border p-5">
+                    {{ form_horarioslote.csrf_token }}
+                    <fieldset>
+                        <div class="form-group">
+                        {{ form_horarioslote.arquivo.label(class="form-control-label") }}
+                        {{ form_horarioslote.arquivo(class="form-control") }}
+
+                        {{ form_horarioslote.botao_submit_horarios(class="btn btn-secondary mt-4 float-end") }}
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

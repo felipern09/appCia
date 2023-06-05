@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="col-1">
+  </div>
+  <div class="col-8">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form_token }}
+        <fieldset>
+            <div class="form-group" >
+                {{ form.corpo.label(class="form-control-label") }}
+                {% if form.corpo.errors %}
+                    {{ form.corpo(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                    {% for erro in form.corpo.errors %}
+                        {{ erro }}
+                    {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.corpo(class="form-control") }}
+                {% endif %}
+                {{ form.botao_submit(class="btn btn-outline-secondary float-end mt-1") }}
+            </div>
+        </fieldset>
+    </form>
+  </div>
+  <div class="col-3">
+  </div>
+</nav>

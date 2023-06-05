@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <div class="container mt-3 ms-5">
+        <div class="col-8">
+            {% if current_user.cargo == 'Gerente Técnico'%}
+                <div class="card2 ms-5 shadow p-3">
+                    Solicitações aguardando análise:
+                    {% for sol in solicit %}
+                        <div class="row">
+                            <div class="col">
+                                {% if sol.analisada == 'False'%}
+                                    <div class="card ms-2 p-1" style="font-size: 12px; background-color: #FFFFE0;">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                Pedido por: {{sol.solicitante.nome.split(' ')[0]}}.
+                                            </div>
+                                            <div class="col-2">
+                                                Substituto: {{sol.nome_substituto.split(' ')[0]}}.
+                                            </div>
+                                            <div class="col-2">
+                                                Início em: {{sol.inicio_subs.strftime('%d/%m/%Y')}}.
+                                            </div>
+                                            <div class="col-2">
+                                                Depto de: {{sol.departamento_aula}}.
+                                            </div>
+                                            <div class="col-3 ms-5">
+                                                Responder:<br>
+                                                <a href="{{url_for('substituicao')}}" style="text-decoration: none; color: black;">
+                                                    <button class="botaook" onclick='y(this)' id="{{ sol.id }}" type="submit">Autorizar</button>
+                                                </a>
+                                                <a href="{{url_for('substituicao')}}" style="text-decoration: none; color: black;">
+                                                <button class="botaono" onclick='z(this)' id="{{sol.id}}" type="submit">Negar</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {%else%}
+                <div class="card2 ms-5 shadow p-3">
+                    Meus pedidos de Substituição:
+                    {% for ped in pedido %}
+                    <div class="row">
+                        <div class="col">
+                            {% if ped.analisada =='False'%}
+                                <div class="card ms-2 p-1" style="font-size: 12px; background-color: #FFFFE0;">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            Pedido em: {{ped.data_pedido.strftime('%d/%m/%Y')}}.
+                                        </div>
+                                        <div class="col-3">
+                                            Substituto: {{ped.nome_substituto.split(' ')[0]}}.
+                                        </div>
+                                        <div class="col-3">
+                                            Início em: {{ped.inicio_subs.strftime('%d/%m/%Y')}}.
+                                        </div>
+                                        <div class="col-3">
+                                            Status: <b>Em análise</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            {%else%}
+                                {% if ped.autorizada == 'True'%}
+                                    <div class="card ms-2 p-1" style="font-size: 12px; background-color: #C1E1C1">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                Pedido em: {{ped.data_pedido.strftime('%d/%m/%Y')}}.
+                                            </div>
+                                            <div class="col-3">
+                                                Substituto: {{ped.nome_substituto.split(' ')[0]}}.
+                                            </div>
+                                            <div class="col-3">
+                                                Início em: {{ped.inicio_subs.strftime('%d/%m/%Y')}}.
+                                            </div>
+                                            <div class="col-3">
+                                                Status: <b>Autorizada</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="card ms-2 p-1" style="font-size: 12px; background-color: #FAA0A0">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                Pedido em: {{ped.data_pedido.strftime('%d/%m/%Y')}}.
+                                            </div>
+                                            <div class="col-3">
+                                                Substituto: {{ped.nome_substituto.split(' ')[0]}}.
+                                            </div>
+                                            <div class="col-3">
+                                                Início em: {{ped.inicio_subs.strftime('%d/%m/%Y')}}.
+                                            </div>
+                                            <div class="col-3">
+                                                Status: <b>Negada</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {%endif%}
+            <div class="card2 ms-5 mt-5 shadow p-3">
+                <div class="row">
+                    <div class="col">
+                        <form method="POST" action="" class="border p-2">
+                            {{ form_substit.csrf_token }}
+                            <h4>Formulário de Substituição</h4>
+                            <fieldset>
+                                <div class="form-group">
+                                <div class="col-6">
+                                {{ form_substit.substituto.label(class="form-control-label") }}
+                                {{ form_substit.substituto(class="form-control") }}
+                                </div>
+                                <div class="col-5">
+                                {{ form_substit.dt_inicio.label(class="form-control-label") }}
+                                </div>
+                                <div class="col-3">
+                                {{ form_substit.dt_inicio(class="form-control text-center") }}
+                                </div>
+                                <div class="col-5">
+                                {{ form_substit.dt_fim.label(class="form-control-label") }}
+                                </div>
+                                <div class="col-3">
+                                {{ form_substit.dt_fim(class="form-control text-center") }}
+                                </div>
+                                <div class="col-3">
+                                {{ form_substit.depto.label(class="form-control-label") }}
+                                {{ form_substit.depto(class="form-control") }}
+                                </div>
+                                <p class="mt-2"> Marque os dias da semana em que a aula acontece:</p>
+                                <div class="row">
+                                    <div class="col-2 float-center text-center">
+                                        {{ form_substit.seg.label(class="form-control-label") }}
+                                        {{ form_substit.seg(class="form-control p-1") }}
+                                    </div>
+                                    <div class="col-2 float-center text-center">
+                                        {{ form_substit.ter.label(class="form-control-label") }}
+                                        {{ form_substit.ter(class="form-control p-1") }}
+                                    </div>
+                                    <div class="col-2 float-center text-center">
+                                        {{ form_substit.qua.label(class="form-control-label") }}
+                                        {{ form_substit.qua(class="form-control p-1") }}
+                                    </div>
+                                    <div class="col-2 float-center text-center">
+                                        {{ form_substit.qui.label(class="form-control-label") }}
+                                        {{ form_substit.qui(class="form-control p-1") }}
+                                    </div>
+                                    <div class="col-2 float-center text-center">
+                                        {{ form_substit.sex.label(class="form-control-label") }}
+                                        {{ form_substit.sex(class="form-control p-1") }}
+                                    </div>
+                                </div>
+                                {{ form_substit.botao_enviar(class="btn btn-secondary mt-4 float-end") }}
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

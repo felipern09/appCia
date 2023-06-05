@@ -1,0 +1,130 @@
+<div class="flex-sm-shrink lateral fixed-top p-3 bg-light mt-5" style="z-index:10;">
+
+  <a href="{{url_for('perfil')}}">
+      <img src="{{ foto_perfil }}" class="rounded pb-3 mb-3 border-bottom text-center" height="100px"><br>
+  </a>
+    <ul class="list-unstyled bg-light">
+    {% if current_user.tipo_usuario == 'master'or current_user.tipo_usuario == 'diretor' or current_user.tipo_usuario == 'presidente' %}
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#gerenciamento" aria-expanded="true">
+          Relatórios
+        </button>
+        <div class="collapse" id="gerenciamento">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('colab') }}" class="link-dark d-inline-flex text-decoration-none rounded">Colaboradores</a></li>
+            <li><a href="{{ url_for('gerirfolha') }}" class="link-dark d-inline-flex text-decoration-none rounded">Dapartamentos</a></li>
+            <li><a href="{{ url_for('custos') }}" class="link-dark d-inline-flex text-decoration-none rounded">Custos no Mês</a></li>
+          </ul>
+        </div>
+      </li>
+    {% endif %}
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#gente-collapse" aria-expanded="true">
+          Cia
+        </button>
+        <div class="collapse" id="gente-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('noticias') }}" class="link-dark d-inline-flex text-decoration-none rounded">Notícias</a></li>
+            <li><a href="{{ url_for('videos') }}" class="link-dark d-inline-flex text-decoration-none rounded">Vídeos</a></li>
+            <li><a href="{{ url_for('textos') }}" class="link-dark d-inline-flex text-decoration-none rounded">Cinthia</a></li>
+            <li><a href="{{ url_for('textos') }}" class="link-dark d-inline-flex text-decoration-none rounded">Normas</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#documentos-collapse" aria-expanded="true">
+          Documentos
+        </button>
+        <div class="collapse" id="documentos-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('documentos') }}" class="link-dark d-inline-flex text-decoration-none rounded">Docs Contratuais</a></li>
+            <li><a href="{{ url_for('docpess') }}" class="link-dark d-inline-flex text-decoration-none rounded">Docs Pessoais</a></li>
+            <li><a href="{{ url_for('atest') }}" class="link-dark d-inline-flex text-decoration-none rounded">Atestados</a></li>
+            <li><a href="{{ url_for('comprov_ir') }}" class="link-dark d-inline-flex text-decoration-none rounded">Comprovantes IR</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#pagamentos-collapse" aria-expanded="false">
+          Pagamento
+        </button>
+        <div class="collapse" id="pagamentos-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('pagamentos') }}" class="link-dark d-inline-flex text-decoration-none rounded">Contracheques</a></li>
+            <li><a href="{{ url_for('previa') }}" class="link-dark d-inline-flex text-decoration-none rounded">Prévia Folha do mês</a></li>
+            <li><a href="{{ url_for('substituicao') }}" class="link-dark d-inline-flex text-decoration-none rounded">Substituições</a></li>
+            <li><a href="{{ url_for('adiant') }}" class="link-dark d-inline-flex text-decoration-none rounded">Adiantamento</a></li>
+            <li><a href="{{ url_for('vt') }}" class="link-dark d-inline-flex text-decoration-none rounded">Vale Transporte</a></li>
+          </ul>
+        </div>
+      </li>
+    {% if current_user.tipo_usuario == 'master' %}
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#rh" aria-expanded="true">
+          Gestão de RH
+        </button>
+        <div class="collapse" id="rh">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('incluirusuario') }}" class="link-dark d-inline-flex text-decoration-none rounded">Autorizar inclusões</a></li>
+            <li><a href="{{ url_for('incluirusuario') }}" class="link-dark d-inline-flex text-decoration-none rounded">Incluir Usuário</a></li>
+            <li><a href="{{ url_for('incluirusuario') }}" class="link-dark d-inline-flex text-decoration-none rounded">Incluir Documento</a></li>
+            <li><a href="{{ url_for('alterarhorarios') }}" class="link-dark d-inline-flex text-decoration-none rounded">Alterar Horários</a></li>
+            <li><a href="{{ url_for('incluirusuario') }}" class="link-dark d-inline-flex text-decoration-none rounded">Folha de Pgto</a></li>
+            <li><a href="{{ url_for('incluirusuario') }}" class="link-dark d-inline-flex text-decoration-none rounded">Pedidos Férias</a></li>
+          </ul>
+        </div>
+      </li>
+    {% endif %}
+    {% if current_user.cargo == 'Gerente Técnico' %}
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#grade" aria-expanded="true">
+          Grade Horária
+        </button>
+        <div class="collapse" id="grade">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('grade') }}" class="link-dark d-inline-flex text-decoration-none rounded">Montar Grade</a></li>
+            <li><a href="{{ url_for('gradedeptos') }}" class="link-dark d-inline-flex text-decoration-none rounded">Dapartamentos</a></li>
+          </ul>
+        </div>
+      </li>
+    {% endif %}
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ferias-collapse" aria-expanded="false">
+          Férias
+        </button>
+        <div class="collapse" id="ferias-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('ferias') }}" class="link-dark d-inline-flex text-decoration-none rounded">Solicitar férias</a></li>
+            <li><a href="{{ url_for('rec_ferias') }}" class="link-dark d-inline-flex text-decoration-none rounded">Pedidos e Recibos</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#desempenho-collapse" aria-expanded="false">
+          Desempenho
+        </button>
+        <div class="collapse" id="desempenho-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('desempenho') }}" class="link-dark d-inline-flex text-decoration-none rounded">Ver Meu Desempenho</a></li>
+            <li><a href="{{ url_for('aval_desempenho') }}" class="link-dark d-inline-flex text-decoration-none rounded">AV Desempenho</a></li>
+            <li><a href="{{ url_for('aval_tecn') }}" class="link-dark d-inline-flex text-decoration-none rounded">Avaliação de Técnica</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+          Conta
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2">
+            <li><a href="{{ url_for('editarperf') }}" class="link-dark d-inline-flex text-decoration-none rounded">Editar Perfil</a></li>
+            <li><a href="{{ url_for('sair') }}" class="link-dark d-inline-flex text-decoration-none rounded">Sair</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+</div>
+
+

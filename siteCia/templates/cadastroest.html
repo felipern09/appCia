@@ -1,0 +1,79 @@
+{% extends 'baselogin.html' %}
+
+{% block body %}
+<div class="container mt-5">
+        <div class="row">
+            <div class="col-8 mx-auto">
+                <form method="POST" action="" class="border p-5">
+                    {{ form_est.csrf_token }}
+
+                    <fieldset>
+                        <div class="form-group">
+                        {{ form_est.email.label(class="form-control-label") }}
+                        {{ form_est.email(class="form-control", placeholder="Digite seu e-mail") }}
+
+                        {{ form_est.nome.label(class="form-control-label") }}
+                        {{ form_est.nome(class="form-control", placeholder="Digite seu nome") }}
+
+                        {{ form_est.datanasc.label(class="form-control-label") }}
+                        {{ form_est.datanasc(class="form-control") }}
+
+                        {{ form_est.cpf.label(class="form-control-label") }}
+                        {{ form_est.cpf(class="form-control", placeholder="CPF") }}
+
+                        {{ form_est.rg.label(class="form-control-label") }}
+                        {{ form_est.rg(class="form-control", placeholder="RG") }}
+
+                        {{ form_est.pai.label(class="form-control-label") }}
+                        {{ form_est.pai(class="form-control", placeholder="Caso não se aplique, digite: Não se aplica") }}
+
+                        {{ form_est.mae.label(class="form-control-label") }}
+                        {{ form_est.mae(class="form-control") }}
+
+                        {{ form_est.genero.label(class="form-control-label") }}
+                        {{ form_est.genero(class="form-control", placeholder="Escolha o gênero") }}
+
+                        {{ form_est.est_civ.label(class="form-control-label") }}
+                        {{ form_est.est_civ(class="form-control", placeholder="Escolha o estado civil") }}
+
+                        {{ form_est.end_res.label(class="form-control-label") }}
+                        {{ form_est.end_res(class="form-control", placeholder="Digite seu endereço") }}
+
+                        {{ form_est.num.label(class="form-control-label") }}
+                        {{ form_est.num(class="form-control", placeholder="Digite o número") }}
+
+                        {{ form_est.bair.label(class="form-control-label") }}
+                        {{ form_est.bair(class="form-control", placeholder="Digite o bairro") }}
+
+                        {{ form_est.cep.label(class="form-control-label") }}
+                        {{ form_est.cep(class="form-control", placeholder="Digite o CEP") }}
+
+                        {{ form_est.tel.label(class="form-control-label") }}
+                        {{ form_est.tel(class="form-control", placeholder="Digite seu telefone") }}
+
+                        {{ form_est.semest.label(class="form-control-label") }}
+                        {{ form_est.semest(class="form-control", placeholder="Digite apenas o número do semestre") }}
+
+                        {{ form_est.turno.label(class="form-control-label") }}
+                        {{ form_est.turno(class="form-control", placeholder="Escolha o turno") }}
+
+                        {{ form_est.concl.label(class="form-control-label") }}
+                        {{ form_est.concl(class="form-control", placeholder="Digite o ano de conclusão") }}
+
+                        {{ form_est.facul.label(class="form-control-label") }}
+                        {{ form_est.facul(class="form-control", placeholder="Digite o nome da faculdade") }}
+
+                        {{ form_est.depart.label(class="form-control-label") }}
+                        {{ form_est.depart(class="form-control", placeholder="Escolha o departamento") }}
+
+                        {{ form_est.horario.label(class="form-control-label") }}
+                        {{ form_est.horario(class="form-control", placeholder="Digite o horário") }}
+
+                        {{ form_est.botao_submit_cadastroE(class="btn btn-secondary mt-4 float-end") }}
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
