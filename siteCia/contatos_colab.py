@@ -1,4 +1,4 @@
-from siteCia.init import app
+from siteCia import app
 from openpyxl import Workbook
 from datetime import datetime
 

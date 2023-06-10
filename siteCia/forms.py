@@ -1,4 +1,4 @@
-from siteCia.init import app
+from siteCia import app
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField,BooleanField, DateField, IntegerField,SelectField, \

@@ -1,5 +1,5 @@
-from siteCia.init import app, database
-from siteCia import cadastro
+from siteCia import app, database
+from siteCia import cadastro, calculo_ferias
 from siteCia.models import Usuario, Post, Comentario, Curtida, Unidade, SolicitacaoFerias, Substituicoes
 from siteCia.forms import FormLogin, CadastrarAutonomo, CadastrarEstagiario, CadastrarFuncionario, TipoColaborador, \
     FormCriarPost, FormAlterarSenha, FormAlterarEmail, FormAlterarUser, FormAlterarInsta, FormAlterarLinkedin, \
@@ -340,9 +340,9 @@ def ferias():
     elif 'windows' in user_agent:
         dispositivo = 'desktop'
     formferias = DataFerias()
-    inicio_min = appCia.calculo_ferias.inicio_min1
-    inicio_format = appCia.calculo_ferias.inicio_format
-    fim_max = appCia.calculo_ferias.fim_max
+    inicio_min = calculo_ferias.inicio_min1
+    inicio_format = calculo_ferias.inicio_format
+    fim_max = calculo_ferias.fim_max
     foto_perfil = url_for('static', filename=f'fotos_perfil/{current_user.foto_perfil}')
 
     return render_template('ferias.html', foto_perfil=foto_perfil, inicio_min=inicio_min, inicio_format=inicio_format,
