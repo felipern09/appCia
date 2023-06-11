@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -34,6 +39,14 @@
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="9447d630-c3a7-42c4-b017-642129fb530d" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="00b20f2f-a27a-4cd7-9bde-3a859c5ef1de" />
+        <option name="url" value="https://github.com/felipern09/appCia.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,8 +72,8 @@
       <recent name="C:\Users\Felipe\PycharmProjects\appCia\siteCia\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Felipe\PycharmProjects\appCia\siteCia\init" />
       <recent name="C:\Users\Felipe\PycharmProjects\appCia\siteCia" />
+      <recent name="C:\Users\Felipe\PycharmProjects\appCia\siteCia\init" />
       <recent name="C:\Users\Felipe\PycharmProjects\appCia" />
       <recent name="C:\Users\Felipe\PycharmProjects\appCia\nwe" />
       <recent name="C:\Users\Felipe\PycharmProjects\appCia\siteCia\static\css" />
