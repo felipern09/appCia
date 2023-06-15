@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/templates/navbar-mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/navbar-mobile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -59,14 +62,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Felipe/PycharmProjects/AutomacaoCia&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Felipe/PycharmProjects/AutomacaoCia",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Felipe\PycharmProjects\appCia\siteCia\templates" />
@@ -231,6 +235,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/siteCia" />
+    </ignored-roots>
     <MESSAGE value="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home." />
     <option name="LAST_COMMIT_MESSAGE" value="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home." />
   </component>

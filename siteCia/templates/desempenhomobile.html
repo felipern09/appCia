@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudomobile %}
+    {% if current_user.tipo_usuario == 'presidente' %}
+        <div class="row ms-2 ms-5" style="height: 100px; font-size: 12px">
+                <div class="col-2 ms-1">
+                    <input type="checkbox" >Todas<br>
+                    <input type="checkbox" checked>Brasília<br>
+                    <input type="checkbox">Clube Cultura<br>
+                    <input type="checkbox">Gelleria Shopping<br>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox">ParkShopping Berigui<br>
+                    <input type="checkbox">Manauara Shopping<br>
+                    <input type="checkbox">RioMar Shopping<br>
+                    <input type="checkbox">Ribeirão Shopping<br>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox">Barra Shopping<br>
+                    <input type="checkbox">Colinas Shopping<br>
+                    <input type="checkbox">Estadio Morumbi<br>
+                    <input type="checkbox">Granja Viana<br>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox">Kansas<br>
+                    <input type="checkbox">Morumbi Shopping<br>
+                    <input type="checkbox">Shopping Anália Franco<br>
+                </div>
+        </div>
+    {%endif%}
+    <div class="float-center">
+        <div class="col-8 mx-auto p-1">
+            <ul>
+                <li><a href="{{ url_for('desempenho') }}" class="link-dark d-inline-flex text-decoration-none rounded">Ver Meu Desempenho</a></li>
+                <li><a href="{{ url_for('aval_desempenho') }}" class="link-dark d-inline-flex text-decoration-none rounded">AV Desempenho</a></li>
+                <li><a href="{{ url_for('aval_tecn') }}" class="link-dark d-inline-flex text-decoration-none rounded">Avaliação de Técnica</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

@@ -469,6 +469,78 @@ def login():
     return render_template('login.html', form_login=form_login, dispositivo=dispositivo)
 
 
+@app.route('/ciamobile', methods=['GET', 'POST'])
+def ciamobile():
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+    if 'iphone' in user_agent or 'android' in user_agent:
+        dispositivo = 'mobile'
+    elif 'windows' in user_agent:
+        dispositivo = 'desktop'
+    form_tipo = TipoColaborador()
+    return render_template('ciamobile.html', form_tipo=form_tipo, dispositivo=dispositivo)
+
+
+@app.route('/docsmobile', methods=['GET', 'POST'])
+def documentosmobile():
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+    if 'iphone' in user_agent or 'android' in user_agent:
+        dispositivo = 'mobile'
+    elif 'windows' in user_agent:
+        dispositivo = 'desktop'
+    form_tipo = TipoColaborador()
+    return render_template('documentosmobile.html', form_tipo=form_tipo, dispositivo=dispositivo)
+
+
+@app.route('/pgtomobile', methods=['GET', 'POST'])
+def pagamentomobile():
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+    if 'iphone' in user_agent or 'android' in user_agent:
+        dispositivo = 'mobile'
+    elif 'windows' in user_agent:
+        dispositivo = 'desktop'
+    form_tipo = TipoColaborador()
+    return render_template('pagamentomobile.html', form_tipo=form_tipo, dispositivo=dispositivo)
+
+
+@app.route('/feriasmob', methods=['GET', 'POST'])
+def feriasmobile():
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+    if 'iphone' in user_agent or 'android' in user_agent:
+        dispositivo = 'mobile'
+    elif 'windows' in user_agent:
+        dispositivo = 'desktop'
+    form_tipo = TipoColaborador()
+    return render_template('feriasmobile.html', form_tipo=form_tipo, dispositivo=dispositivo)
+
+
+@app.route('/desempmob', methods=['GET', 'POST'])
+def desempenhomobile():
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+    if 'iphone' in user_agent or 'android' in user_agent:
+        dispositivo = 'mobile'
+    elif 'windows' in user_agent:
+        dispositivo = 'desktop'
+    form_tipo = TipoColaborador()
+    return render_template('desempenhomobile.html', form_tipo=form_tipo, dispositivo=dispositivo)
+
+
+@app.route('/contamob', methods=['GET', 'POST'])
+def contamobile():
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+    if 'iphone' in user_agent or 'android' in user_agent:
+        dispositivo = 'mobile'
+    elif 'windows' in user_agent:
+        dispositivo = 'desktop'
+    form_tipo = TipoColaborador()
+    return render_template('contamobile.html', form_tipo=form_tipo, dispositivo=dispositivo)
+
+
 @app.route('/tipocolab', methods=['GET', 'POST'])
 def tipo():
     user_agent = request.headers.get('User-Agent')

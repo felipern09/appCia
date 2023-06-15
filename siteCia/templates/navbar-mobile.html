@@ -12,10 +12,13 @@
           <img src="{{ url_for('static', filename='imgs/menu.png') }}" class="img-fluid ms-2" width="50px">
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('ciamobile') }}">Cia</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('documentosmobile') }}">Documentos</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('pagamentomobile') }}">Pagamento</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('feriasmobile') }}">Férias</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('desempenhomobile') }}">Desempenho</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('contamobile') }}">Conta</a></li>
         </ul>
       </li>
       {% if 1==2 %}
