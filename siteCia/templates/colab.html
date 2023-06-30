@@ -28,66 +28,67 @@
     </div>
 {%endif%}
 
-
-<div class="row">
-    <div class="col text-end mt-2" style="text-decoration: none;">
-        <a href="siteCia/Colaboradores.xlsx" style="text-decoration: none;" download>
-            Baixar planilha excel
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="col text-end mt-2" style="text-decoration: none;">
-        <a href="{{url_for('admcolab')}}" style="text-decoration: none; color: black;">
-            Administrar colaboradores
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="col-4 text-center mt-3">Total de Funcionários CLT: {{funcionarios}}</div>
-    <div class="col-4 text-center mt-3">Total de Estagiários: {{estagiarios}}</div>
-    <div class="col-4 text-center mt-3">Total de PJ: {{pj}}</div>
-</div>
-<div class="row">
-    {% for usuario in usuarios %}
-        <div class="col-4">
-                <div class="cardcolab ms-5 flex border shadow p-3">
-                    <div class="d-flex align-items-center">
-                        <div class="image p-3">
-                            <img src="../static/fotos_perfil/{{ usuario.foto_perfil }}" height="50px"><br>
-                        </div>
-                        <div class="ml-5 w-100">
-                           <a href="{{url_for('perfilof', usuario_id=usuario.id)}}" style="color: black"><h6 class="mb-0 mt-0">{{ usuario.nome }}</h6></a>
-                           <span>{{ usuario.cargo | replace('Oaf','OAF') }}</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center ms-1 mt-1" id="dados" style="font-size: 12px;">
-                        <ul>
-                            <li>Unidade: {{ usuario.unid.nome }}</li>
-                            <li>Contrato: {{ usuario.contrato }}</li>
-                            <li>Data de Admissão: {{ usuario.admissao.strftime('%d/%m/%Y') }}</li>
-                            <li>E-mail: {{ usuario.email }}</li>
-                            <li>
-                                {% if usuario.salario!= 0 %}
-                                Salário: R$ {{ usuario.salario | replace('.',',') }}
-                                {%else%}
-                                Hr-aula: R$ {{ usuario.hora_aula | replace('.',',') }}
-                                {%endif%}
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row">
-                    <div class="col-8 d-flex align-items-center ms-4" id="redes">
-                        <p><a href="{{ usuario.linkedin }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-linkedin.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
-                        <p><a href="https://www.instagram.com/{{ usuario.insta }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-insta.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
-                        <p><a href="https://www.twitter.com/{{ usuario.twitter }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-tt.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
-                        <p><a href="https://wa.me/55{{ usuario.whatsapp }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-wpp.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
-                    </div>
-                    <div class="col-3 text-end"><img src="{{url_for('static', filename='/imgs/lixo.jpg') }}" class="img-thumbnail" style="width: 30px;"></div>
-                    </div>
-                </div>
+<div class="col ms-5">
+    <div class="row">
+        <div class="col text-end mt-2" style="text-decoration: none;">
+            <a href="siteCia/Colaboradores.xlsx" style="text-decoration: none;" download>
+                Baixar planilha excel
+            </a>
         </div>
-    {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col text-end mt-2" style="text-decoration: none;">
+            <a href="{{url_for('admcolab')}}" style="text-decoration: none; color: black;">
+                Administrar colaboradores
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 text-center mt-3">Total de Funcionários CLT: {{funcionarios}}</div>
+        <div class="col-4 text-center mt-3">Total de Estagiários: {{estagiarios}}</div>
+        <div class="col-4 text-center mt-3">Total de PJ: {{pj}}</div>
+    </div>
+    <div class="row">
+        {% for usuario in usuarios %}
+            <div class="col-4">
+                    <div class="cardcolab ms-5 flex border shadow p-3">
+                        <div class="d-flex align-items-center">
+                            <div class="image p-3">
+                                <img src="../static/fotos_perfil/{{ usuario.foto_perfil }}" height="50px"><br>
+                            </div>
+                            <div class="ml-5 w-100">
+                               <a href="{{url_for('perfilof', usuario_id=usuario.id)}}" style="color: black"><h6 class="mb-0 mt-0">{{ usuario.nome }}</h6></a>
+                               <span>{{ usuario.cargo | replace('Oaf','OAF') }}</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center ms-1 mt-1" id="dados" style="font-size: 12px;">
+                            <ul>
+                                <li>Unidade: {{ usuario.unid.nome }}</li>
+                                <li>Contrato: {{ usuario.contrato }}</li>
+                                <li>Data de Admissão: {{ usuario.admissao.strftime('%d/%m/%Y') }}</li>
+                                <li>E-mail: {{ usuario.email }}</li>
+                                <li>
+                                    {% if usuario.salario!= 0 %}
+                                    Salário: R$ {{ usuario.salario | replace('.',',') }}
+                                    {%else%}
+                                    Hr-aula: R$ {{ usuario.hora_aula | replace('.',',') }}
+                                    {%endif%}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                        <div class="col-8 d-flex align-items-center ms-4" id="redes">
+                            <p><a href="{{ usuario.linkedin }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-linkedin.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
+                            <p><a href="https://www.instagram.com/{{ usuario.insta }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-insta.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
+                            <p><a href="https://www.twitter.com/{{ usuario.twitter }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-tt.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
+                            <p><a href="https://wa.me/55{{ usuario.whatsapp }}" target="_blank" class="ms-1" style="color: black"><img src="{{url_for('static', filename='/imgs/tumb-wpp.png') }}" class="img-thumbnail" style="width: 30px;"></a></p>
+                        </div>
+                        <div class="col-3 text-end"><img src="{{url_for('static', filename='/imgs/lixo.jpg') }}" class="img-thumbnail" style="width: 30px;"></div>
+                        </div>
+                    </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

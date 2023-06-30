@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-<div class="row mx-auto">
-{% for depto in deptos %}
-<div class="col-4">
-    <div class="card2 mt-2 ms-5 p-2">
-        <b>Grade {{depto}}:<br></b>
-        Seg:<br>
-        Ter:<br>
-        Qua:<br>
-        Qui:<br>
-        Sex:<br>
-
+<div class="col ms-5">
+    <div class="row mx-auto">
+    {% for depto in deptos %}
+    <div class="col-4">
+        <div class="card2 mt-2 ms-5 p-2">
+            <b>Grade {{depto}}:<br></b>
+            Seg:<br>
+            Ter:<br>
+            Qua:<br>
+            Qui:<br>
+            Sex:<br>
+        </div>
     </div>
-</div>
-{%endfor%}
+    {%endfor%}
+    </div>
 </div>
 {% endblock %}

@@ -27,33 +27,35 @@
             </div>
     </div>
 {%endif%}
-<div class="row mt-2">
-    <div class="col text-end"><a href="" download="Folha.xlsx" style="text-decoration: none;">Baixar em excel</a></div>
+<div class="col ms-5">
+    <div class="row mt-2">
+        <div class="col text-end"><a href="" download="Folha.xlsx" style="text-decoration: none;">Baixar em excel</a></div>
+    </div>
+        <div class="row ms-5 mt-5 border-bottom" style="height: 20rem;">
+            <div class="container ms-5 float-end">
+                <img src="../static/imgs/grafico.jpg" class="ms-5 mt-3" style="height: 290px; width: 780px"><br>
+            </div>
+        </div>
+        <div class="row">
+            {% for depart in dpto %}
+                    <div class="col-4">
+                            <div class="cardcolab ms-5 flex border shadow p-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="image p-3">
+                                        <img src="../static/imgs/{{ depart }}.jpg" height="90px"><br>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center ms-1 mt-1" id="dados" style="font-size: 12px;">
+                                    <ul>
+                                        <li class="mt-1">Unidade: {{ unidade.nome }}</li>
+                                        <li class="mt-1">Departamento: {{ depart }}</li>
+                                        <li class="mt-1">Colaboradores: {{ numfunc[depart] }} </li>
+                                        <li class="mt-1">Média Folha: {{ media[depart ]}} </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+            {%endfor%}
+        </div>
 </div>
-    <div class="row ms-5 mt-5 border-bottom" style="height: 20rem;">
-        <div class="container ms-5 float-end">
-            <img src="../static/imgs/grafico.jpg" class="ms-5 mt-3" style="height: 290px; width: 780px"><br>
-        </div>
-    </div>
-    <div class="row">
-{% for depart in dpto %}
-        <div class="col-4">
-                <div class="cardcolab ms-5 flex border shadow p-3">
-                    <div class="d-flex align-items-center">
-                        <div class="image p-3">
-                            <img src="../static/imgs/{{ depart }}.jpg" height="90px"><br>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center ms-1 mt-1" id="dados" style="font-size: 12px;">
-                        <ul>
-                            <li class="mt-1">Unidade: {{ unidade.nome }}</li>
-                            <li class="mt-1">Departamento: {{ depart }}</li>
-                            <li class="mt-1">Colaboradores: {{ numfunc[depart] }} </li>
-                            <li class="mt-1">Média Folha: {{ media[depart ]}} </li>
-                        </ul>
-                    </div>
-                </div>
-        </div>
-{%endfor%}
-    </div>
 {% endblock %}
