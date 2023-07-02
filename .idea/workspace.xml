@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/adiant.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/adiant.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/colab.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/colab.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/editarPerfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/editarPerfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/folha.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/folha.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/gentetextos.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/gentetextos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/gerirfolha.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/gerirfolha.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/gradedeptos.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/gradedeptos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/perfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/perfilof.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/perfilof.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteCia/templates/vt.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteCia/templates/vt.html" afterDir="false" />
-    </list>
+    <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
