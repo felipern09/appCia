@@ -4,7 +4,172 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home." />
+    <list default="true" id="1db10c78-32b8-4701-a733-dbb1f3c3deef" name="Changes" comment="Alteração no formulário de estagiário para aparecer os placeholders; retirada de RG e CPF dos docs pessoais; alteração no alinhamento de post na home.">
+      <change beforePath="$PROJECT_DIR$/.idea/appCia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appCia.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Aislene.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Alane.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Alexandra.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Aline.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Bilton.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/CiaBsb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Cinthia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Cinthia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Felipe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Felipe3a48ffd8efd7e746.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Felipea56167f5af366309.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Felipec88d4af9da5f6eab.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Foto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Logo Cia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Marcelo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Marcelo5b4fa5f5d86177de.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Richard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/Wallace.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/WhatsApp Image 2023-06-30 at 07.02.466d07a4452d64be0b.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/airton.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/amanda.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/amandah.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/andre.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/andressa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/andressaK.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/aparecido.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/arthur.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/bruna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/brunag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/brunas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/brunoa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/brunoc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/brunof.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/brunoh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/camila.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/cassio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/catarina.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/cibelle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/cinthia1058c20194e74011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/daiane.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/daniel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/dorys.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/edilton.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/edivan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/edy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/elma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/eric.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/erika.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/fabiana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/felipeg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/frederico.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/gabriel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/gabrielano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/gabrielap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/gustavo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/helen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/hugo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/igorm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/igors.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/isabela.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/isabella.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/jacira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/jhenyfer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/joaom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/joaomat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/joaop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/joice.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/josea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/joseant.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/kevin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/kleberson.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/laura.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/lidia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/logo_cia26ba4f1a65a187f5e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/logo_cia27193d4229e785058.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/logo_ciae27b6913c8707729.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/luciana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/lucianao.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/luis.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/marcello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/marcio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/marcos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/maria.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/mateusm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/mateusp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/mayara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/maycon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/michael.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/mir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/moema.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/morgana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/nagila.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/nayara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/orlandina.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/patricia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/pauloc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/paulom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/paulos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/pedro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/phelipe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/polyanna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/raiana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/raissa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/raquel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/rebeca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/renata.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/roberio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/roges.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/rosiani.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/sara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/shayane.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/simone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/sirlei.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/suelena.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/suzana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/tainan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/tamires.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/thais.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/thyago.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/tiago.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/ueliton.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/vitor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/vitorc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/vitoria.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/waldir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/wallacem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/wallas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/wanessa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/weksley.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_perfil/yago.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/Feliped951d4cfb21cb0dc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/Foto Perfil 2a3c6f14f5a011934.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/Marcelo1e30348bb27c2fe1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/Wallace639e2b27cbd8b467.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/WhatsApp Image 2022-12-26 at 06.20.17798d66b0aaf78a8a.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/WhatsApp Image 2022-12-26 at 06.20.3703a7f546a84b16cd.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/WhatsApp Image 2022-12-26 at 06.21.034a13a23e6cee443b.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/WhatsApp Image 2022-12-26 at 06.22.27a65fdc031cfc0cc8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/WhatsApp Image 2022-12-26 at 06.22.34a7f0145aae19d4a2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/WhatsApp Image 2022-12-26 at 06.36.04(1)9a32cab5b4390bce.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/WhatsApp Image 2022-12-26 at 06.37.5204fcf4bbe7d4f15e.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/arraialf6f1c554a13d83c2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/av6ce5fc878359a7d9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/babyde697e7bdf5d82a3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/default5cf522c8f0a97d7f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/default60aa375d2476bccc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/desempenho3e531e9dc616130d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/desempenho45393185916612f0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/desempenho656685bb0262fce9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/desempenhocde93613d00f47ce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/desempenhoeb87303e0afe5311.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/documentos1445f01e058622fe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/documentosd4cae118580a7716.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/ferias66e4068d98eba6e5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/ferias7433e28882515945.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/feriasc83d9416d85bd168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/feriase17dc2c59361fd59.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/homed60ece114ef3e029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/logo_ciae724e35c01710194.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/samuraiaba1902d03f32e9f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/testea683f89ed8fec888.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteCia/static/fotos_post/testef1917806682388fc.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
