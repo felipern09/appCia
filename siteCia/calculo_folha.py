@@ -16,7 +16,7 @@ from dateutil.relativedelta import relativedelta
 
 class Calcular:
     nomedias = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom']
-    dsr = 1.17
+    dsr = 1.1666
     data = datetime.today()
     if data.day >= 21:
         inicio = datetime(day=21, month=data.month, year=data.year)
