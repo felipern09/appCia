@@ -4,7 +4,7 @@ from siteCia.models import Usuario, Post, Comentario, Curtida, Unidade, Solicita
 from siteCia.forms import FormLogin, CadastrarAutonomo, CadastrarEstagiario, CadastrarFuncionario, TipoColaborador, \
     FormCriarPost, FormAlterarSenha, FormAlterarEmail, FormAlterarUser, FormAlterarInsta, FormAlterarLinkedin, \
     FormAlterarTt, AlterarFoto, FormCriarComent, Substituir, MsgPrivada, DataFerias, MontarGrade, CadastrarUsuario, \
-    CadastrarLote, HorariosLote
+    CadastrarLote, HorariosLote, EscolherHorarios
 from flask import render_template, redirect, url_for, flash, request
 from flask_login import login_user, logout_user, current_user, login_required
 import secrets
@@ -973,13 +973,14 @@ def incluirusuario():
 def alterarhorarios():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
+    horarios = EscolherHorarios()
     if 'iphone' in user_agent or 'android' in user_agent:
         dispositivo = 'mobile'
     elif 'windows' in user_agent:
         dispositivo = 'desktop'
     horarioslote = HorariosLote()
     foto_perfil = url_for('static', filename=f'fotos_perfil/{current_user.foto_perfil}')
-    return render_template('alterarhorarios.html', foto_perfil=foto_perfil, dispositivo=dispositivo, form_horarioslote=horarioslote)
+    return render_template('alterarhorarios.html', foto_perfil=foto_perfil, form_horarios=horarios, dispositivo=dispositivo, form_horarioslote=horarioslote)
 
 
 @app.route('/sair')

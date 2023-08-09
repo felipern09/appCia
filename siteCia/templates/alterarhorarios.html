@@ -3,6 +3,19 @@
     <div class="container mt-3 ms-5">
         <div class="col-8">
             <div class="card2 ms-5 mt-1 shadow p-3">
+                <h5>Alterar Funcionário específico</h5>
+                <h6>Escolha o funcionário a ser alterado:</h6>
+                <fieldset>
+                    <div class="form-group">
+                    <div class="col-6">
+                    {{ form_horarios.professor.label(class="form-control-label") }}
+                    {{ form_horarios.professor(class="form-control") }}
+                    </div>
+                    {{ form_horarios.botao_enviar(class="btn btn-secondary mt-4 float-end") }}
+                    </div>
+                </fieldset>
+            </div>
+            <div class="card2 ms-5 mt-1 shadow p-3">
                 <h5>Alterar todos horários em lote</h5>
                 <h6>O arquivo excel deve seguir padrão conforme exemplo:</h6>
                 <img src="../static/imgs/Exemplo.png" style="width: 100%; height: 80px;">

@@ -195,6 +195,12 @@ class Substituir(FlaskForm):
         botao_enviar = SubmitField('Enviar')
 
 
+class EscolherHorarios(FlaskForm):
+    with app.app_context():
+        professor = SelectField('Professor', choices=([usuario.nome for usuario in Usuario.query.order_by(Usuario.nome).all()]), validators=[DataRequired()])
+        botao_enviar = SubmitField('Enviar')
+
+
 class DataFerias(FlaskForm):
     inicio1 = DateField('Início das Férias', format='%d/%m/%Y', validators=[DataRequired()])
     fim1 = DateField('Início das Férias', format='%d/%m/%Y', validators=[DataRequired()])
